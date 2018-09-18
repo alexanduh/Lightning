@@ -15,8 +15,6 @@ void draw()
 	int rgbRand1 = (int)(Math.random()*256);
 	int rgbRand2 = (int)(Math.random()*256);
 	int rgbRand3 = (int)(Math.random()*256);
-	// int nine = (int)(Math.random()*10);
-	// int negative = (int)(Math.random()*19-9);
 	stroke(rgbRand1, rgbRand2, rgbRand3);
 	while(endX < 300) {
 		endX = startX + (int)(Math.random()*10);
