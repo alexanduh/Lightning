@@ -6,12 +6,15 @@ int endY = 150;
 
 void setup()
 {
+  noLoop();
   strokeWeight(4);
   background(0);
   size(800, 300);
+  frameRate(60);
 }
 void draw()
 {
+	background(0);
 	int rgbRand1 = (int)(Math.random()*256);
 	int rgbRand2 = (int)(Math.random()*256);
 	int rgbRand3 = (int)(Math.random()*256);
@@ -26,6 +29,7 @@ void draw()
 }
 void mousePressed()
 {
+	redraw();
 	startX = 0;
 	startY = 150;
 	endX = 0;
