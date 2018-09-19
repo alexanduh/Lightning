@@ -6,7 +6,7 @@ int endY = 150;
 
 void setup()
 {
-  noLoop();
+  //noLoop();
   strokeWeight(4);
   background(0);
   size(800, 300);
@@ -14,14 +14,14 @@ void setup()
 }
 void draw()
 {
-	background(0);
+	//background(0);
 	int rgbRand1 = (int)(Math.random()*256);
-	int rgbRand2 = (int)(Math.random()*256);
+	int rgbRand2 = (int)(Math.random()*25+6);
 	int rgbRand3 = (int)(Math.random()*256);
 	stroke(rgbRand1, rgbRand2, rgbRand3);
-	while(endX < 300) {
+	if(endX < 600) {
 		endX = startX + (int)(Math.random()*10);
-		endY = startY + (int)(Math.random()*19-9);
+		endY = startY + (int)(Math.random()*15-7);
 		line(startX, startY, endX, endY);
 	  	startX = endX;
 		startY = endY;
@@ -29,7 +29,7 @@ void draw()
 }
 void mousePressed()
 {
-	redraw();
+	//redraw();
 	startX = 0;
 	startY = 150;
 	endX = 0;
