@@ -1,7 +1,8 @@
-int startX = 250;
+int startX = (int)(Math.random()*200+150);
 int startY = 0;
-int endX = 250;
+int endX = (int)(Math.random()*200+150);
 int endY = 0;
+int squig = 30;
 
 
 void setup()
@@ -9,7 +10,7 @@ void setup()
   strokeWeight(4);
   background(0);
   size(500, 800);
-  frameRate(120);
+  frameRate(2000);
 }
 void draw()
 {
@@ -18,8 +19,8 @@ void draw()
 	int rgbRand3 = (int)(Math.random()*256);
 	stroke(rgbRand1, rgbRand2, rgbRand3);
 	if(endY < 600) {
-		endY = startY + (int)(Math.random()*10);
-		endX = startX + (int)(Math.random()*30-15);
+		endY = startY + (int)(Math.random()*5);
+		endX = startX + (int)(Math.random()*squig-squig/2);
 		line(startX, startY, endX, endY);
 	  	startY = endY;
 		startX = endX;
@@ -27,10 +28,11 @@ void draw()
 }
 void mousePressed()
 {
+	background(0);
 	redraw();
-	startX = 250;
+	startX = (int)(Math.random()*200+150);
 	startY = 0;
-	endX = 250;
+	endX = (int)(Math.random()*200+150);
 	endY = 0;
 }
 
